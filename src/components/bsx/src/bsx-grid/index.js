@@ -9,7 +9,6 @@
 import Vue from 'vue';
 import grid from './src';
 import column from './src/column';
-
 Vue.component(grid.name,grid);
 Vue.component(column.name,column);
 

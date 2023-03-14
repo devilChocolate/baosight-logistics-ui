@@ -12,6 +12,9 @@ import Message from './src/bsx-message';
 import Toast from './src/bsx-toast';
 import Loading from './src/bsx-loading';
 import Result from './src/bsx-result';
+import Grid from './src/bsx-grid';
+
+import FormComponent from './src/bsx-form';
 import DialogComponent from './src/bsx-dialog/src';
 import ScrollbarComponent from './src/bsx-scrollbar';
 import ResultComponent from './src/bsx-result/src';

@@ -144,9 +144,6 @@ export default {
     	 * 辅助显示loading
     	 */
         _fetchShowLoading(){
-            debugger
-            console.log(this.loading,'loading');
-            console.log(this.$$loadin,'$$loading');
             if(!this.loading){
                 this.loading=this.$$loading({
                     target:this.$refs.body,
