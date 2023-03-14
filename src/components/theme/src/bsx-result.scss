@@ -1,0 +1,61 @@
+.app_result-container{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    padding:20px;
+    cursor:default;
+    .app_result-img{
+        width:200px;
+        margin-bottom:20px;
+    }
+    .app_result-text{
+        font-size:12px;
+        color:#333;
+        line-height:20px;
+        width:100%;
+        text-align:center;
+        .app_result-text-tip{
+            position:relative;
+            padding:0 0 0 17px;
+            .app_result-icon{
+                position:absolute;
+                left:0;
+                top:0;
+                font-size:20px;
+                color:#fa4e4e;
+            }
+            .app_result-button-mini{
+                color:#fa4e4e;
+                text-decoration: none;
+            }
+        }
+    }
+    .app_result-button{
+        padding:0 10px;
+        color:#fff;
+        background-color:#0354a8;
+        line-height:36px;
+        text-align:center;
+        border-radius:3px;
+        text-decoration: none;
+        transition:all 0.3s ease-out;
+        font-size:12px;
+        .app_result-icon{
+            font-size:18px;
+        }
+        &:hover{
+            background-color:#004083;
+        }
+    }
+}
+.app_result-enter-active,.app_result-leave-active {
+    transition:all ease-out 0.3s;
+}
+.app_result-enter,.app_result-leave-to {
+    opacity: 0;
+}
+.app_result-enter-to,.app_result-leave {
+    opacity:1;
+}

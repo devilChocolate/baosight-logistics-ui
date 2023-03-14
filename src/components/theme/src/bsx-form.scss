@@ -1,0 +1,507 @@
+.bsx-form{
+    width:100%;
+    position:relative;
+    .bsx-form-box+.bsx-form-box{
+        margin-left:15px;
+    }
+}
+.bsx-form-box{
+    &.no-gridable{
+        line-height:28px;
+        min-height:28px;
+        .bsx-form-textarea{
+            position:relative !important;
+            left:0 !important;
+            top:0 !important;
+            transform:translate(0,0) !important;
+        }
+        .bsx-form-upload{
+            padding:5px 0;
+            line-height:18px;
+            .bsx-form-upload-item{
+                line-height:18px;
+            }
+        }
+    }
+    .bsx-form-label{
+        line-height:18px;
+        padding:5px 0;
+        i.star{
+            color:#f00;
+            font-size:12px;
+            position:relative;
+            top:2px;
+            margin-right:5px;
+        }
+    }
+    .bsx-form-input{
+        position:relative;
+        &.bsx-form-textarea{
+            position:absolute;
+            left:0;
+            top:50%;
+            transform:translate(0,-50%);
+            right:0;
+            font-family:Microsoft Yahei, tahoma, arial, Hiragino Sans GB, \5b8b\4f53, sans-serif;
+        }
+        .el-input{
+            width:100%;
+            &.has-prefix{
+                .el-input__inner{
+                    padding-left:30px;
+                }
+                .el-input__prefix{
+                    left:10px;
+                    display: flex;
+                 	flex-direction:column;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                }
+            }
+        }
+        .el-input__inner{
+            padding-left:10px;
+            width:100%;
+        }
+        .el-textarea__inner{
+            padding-left:10px;
+            padding-right:10px;
+        }
+        .el-input--mini{
+            .el-textarea__inner{
+                line-height:16px;
+            }
+        }
+        .bsx-form-valid-icon{
+            font-size:16px !important;
+            &.ok{
+                color:#01b98c;
+            }
+            &.fail{
+                color:#ed9ea1;
+            }
+        }
+        &.pad-r{
+            .el-input__inner{
+                padding-right:55px;
+            }
+            .el-textarea__inner{
+                padding-right:30px;
+            }
+        }
+        &.true{
+            .el-input__inner,.el-textarea__inner{
+                border-color:#01b98c !important;
+                background-color:#e6fdf8;
+            }
+            .bsx-form-valid-icon{
+                color:#01b98c;
+            }
+            .el-textarea__inner{
+                padding-right:30px;
+            }
+            &.bsx-form-cascader{
+                .el-input__suffix{
+                    display:none;
+                }
+            }
+        }
+        &.error{
+            .el-input__inner,.el-textarea__inner{
+                border-color:#ed9ea1 !important;
+                background-color:#fef4f3;
+            }
+            .bsx-form-valid-icon{
+                color:#ed9ea1;
+            }
+            .el-textarea__inner{
+                padding-right:30px;
+            }
+            &.bsx-form-cascader{
+                .el-input__suffix{
+                    display:none;
+                }
+            }
+        }
+        .bsx-form-message{
+            position:absolute;
+            right:0;
+            top:27px;
+            line-height:20px;
+            padding:5px 8px;
+            border-radius:3px;
+            border:solid 1px #ed9ea1;
+            background-color:#fdedec;
+            color:#333;
+            font-size:12px;
+            line-height:16px;
+            text-align:justify;
+            z-index:2;
+            &.medium{
+                top:35px;
+            }
+            &.small{
+                top:31px;
+            }
+            &:after{
+                content:'';
+                position:absolute;
+                top:-5px;
+                right:11px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid #ed9ea1;
+                z-index:1;
+            }
+            &:before{
+                content:'';
+                position:absolute;
+                top:-4px;
+                right:12px;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-bottom: 4px solid #fdedec;
+                z-index:2;
+            }
+        }
+    	&.bsx-form-select{
+    		&.dis-multiple-tags{
+    			.el-select__tags{
+    				display:none;
+    			}
+    		}
+    		.el-tag{
+    			padding-right:20px;
+    			background-color:#f9f9f9;
+    			color:#333;
+    			border-color:#ddd;
+    			max-width:98%;
+    			position:relative;
+    			.el-select__tags-text{
+    				max-width:100%;
+    				overflow:hidden;
+    				text-overflow:ellipsis;
+    				display:inline-block;
+    			}
+    			.el-tag__close{
+    				background-color:#eee;
+    				border-color:#eee;
+    				color:#999;
+    				top:50%;
+    				transform:translate(-2px,-40%) scale(0.7);
+    				position:absolute;
+    				right:0;
+    				&:hover{
+    					background-color:#ddd;
+    					border-color:#ddd;
+    					color:#666;
+    				}
+    			}
+    		}
+    		.el-input__prefix{
+    			left:auto;
+    			right:5px;
+    		}
+    		&.true,&.error{
+    			.el-input__suffix{
+    				display:none;
+    			}
+    		}
+    	}
+    	&.bsx-form-calendar{
+    		.el-input__prefix{
+    			left:auto;
+    			right:5px;
+    		}
+    		.el-range__icon{
+    			position:absolute;
+    			right:5px;
+    			top:0;
+    			margin:0;
+    			font-size:12px;
+    		}
+    		.el-range-separator{
+    			width:auto;
+                top:-2px;
+                position:relative;
+    		}
+            .el-range-editor--mini{
+                .el-range-separator{
+                    line-height:22px;
+                }
+            }
+            .el-range-editor--small{
+                .el-range-separator{
+                    line-height:28px;
+                }
+            }
+            .el-range-editor--medium{
+                .el-range-separator{
+                    top:0;
+                }
+            }
+    		.el-range-input{
+    			background:none;
+    		}
+    		.el-range__close-icon{
+                position:absolute;
+    			right:11px;
+    			top:0;
+    			margin:0;
+    			font-size:12px;
+                float:none;
+                width:auto;
+    		}
+    		&.active{
+    			.el-input__prefix,.el-range__icon{
+    				display:none;
+    			}
+    		}
+    		&.true,&.error{
+    			.el-input__suffix,.el-range__close-icon{
+    				display:none;
+    			}
+    		}
+    	}
+        .user-icon{
+            position:absolute;
+            right:5px;
+            top:-6px;
+            &.medium{
+                top:-2px;
+            }
+            &.small{
+                top:-4px;
+            }
+            .close{
+                color:#c1c4cd;
+                cursor:pointer;
+                font-size:14px;
+                &:hover{
+                    color:#95979d;
+                }
+            }
+        }
+    }
+}
+.bsx-form-popper-select{
+	.el-select-dropdown__wrap{
+		max-height:206px;
+	}
+    .el-select-dropdown__list{
+        padding:5px 0;
+    }
+	.el-select-dropdown__item {
+		padding:5px 10px;
+		font-size:12px;
+		line-height:18px;
+		min-height:18px;
+		height:auto;
+		white-space:normal;
+		text-overflow:inherit;
+		&.is-disabled{
+			opacity:0.5;
+			cursor:default;
+		}
+	}
+    .el-select-dropdown__empty{
+        font-size:12px;
+        text-align:left;
+        padding:5px 10px;
+    }
+	&.is-multiple{
+		.el-select-dropdown__item {
+			span{
+				margin-right:30px;
+			}
+		}
+	}
+}
+.bsx-form-popper-suggest{
+    .el-autocomplete-suggestion__wrap{
+		max-height:206px;
+        max-width:250px;
+        padding:5px 0;
+	}
+    li{
+        padding:5px 10px;
+		font-size:12px;
+		line-height:18px;
+		min-height:18px;
+		white-space:normal;
+		text-overflow:inherit;
+    }
+}
+.bsx-form-popper-cascader{
+    .el-cascader-menu{
+        min-width:120px;
+        max-width:250px;
+        .el-cascader-menu__wrap{
+            height:208px;
+        }
+        .el-cascader-node{
+            padding:5px 20px 5px 10px;
+            line-height:18px;
+            height:auto;
+            font-size:12px;
+            min-height:18px;
+            white-space:normal;
+            text-overflow:inherit;
+            .el-cascader-node__label{
+                padding:0;
+                white-space:normal;
+                text-overflow:inherit;
+            }
+            .el-cascader-node__postfix{
+                right:5px;
+            }
+        }
+    }
+}
+.bsx-form-upload{
+    .bsx-form-upload-cell{
+        height:32px;
+        overflow:hidden;
+        .el-button{
+            width:auto;
+            height:auto;
+            padding:8px 15px;
+        }
+        .bsx-form-upload-tip{
+            line-height:16px;
+            font-size:12px;
+            color:#fd4437;
+        }
+        &+.bsx-form-upload-list{
+            margin-top:5px;
+        }
+    }
+    .bsx-form-upload-message{
+        margin-top:5px;
+        position:relative;
+        padding:5px 8px;
+        border:solid 1px #ed9ea1;
+        background-color:#fdedec;
+        color:#333;
+        font-size:12px;
+        line-height:16px;
+        text-align:justify;
+        border-radius:3px;
+        p{
+            margin:0;
+        }
+        i{
+            color:#ed9ea1;
+            margin-left:5px;
+            width:auto;
+            height:16px;
+            line-height:16px;
+            font-size:16px;
+        }
+        &+.bsx-form-upload-list{
+            margin-top:5px;
+        }
+    }
+    .bsx-form-upload-list{
+        .bsx-form-upload-item{
+            line-height:16px;
+            transition:all 0.3s ease-out;
+            border-radius:3px;
+            overflow:hidden;
+            position:relative;
+            margin-top:5px;
+            &:first-child{
+                margin-top:0;
+            }
+            .m1{
+                margin-right:5px;
+                cursor:default;
+                color:#abadb2;
+                &.pdf{
+                    color:#bc1905;
+                }
+                &.excel{
+                    color:#338d5c;
+                }
+                &.word{
+                    color:#3d6ab1;
+                }
+                &.image{
+                    color:#0d83db;
+                }
+            }
+            .mf{
+                width:auto;
+                height:16px;
+                line-height:18px;
+                position:absolute;
+                transition:all 0.3s ease-out;
+                top:0;
+                &.m2{
+                    opacity:0;
+                    right:-5px;
+                    cursor:pointer;
+                    &:hover{
+                        color:#f60;
+                    }
+                }
+                &.m3{
+                    cursor:default;
+                    opacity:1;
+                    right:0;
+                    color:#01b98c;
+                }
+            }
+            .bsx-form-upload-name{
+                margin:0;
+                a{
+                    transition:all 0.3s ease-out;
+                    color:#333;
+                    &:hover{
+                        color:#409fff;
+                        text-decoration:underline;
+                    }
+                }
+            }
+            .bsx-form-upload-loading{
+                position:relative;
+                width:16px;
+                height:16px;
+                .app_loading-path{
+                    stroke:#037cb8!important;
+                }
+            }
+            .bsx-form-upload-loading-text{
+                color:#037cb8;
+            }
+            &:hover{
+                .m2{
+                    opacity:1;
+                    right:0;
+                }
+            }
+            &.p-r{
+                padding-right:20px;
+            }
+            &.editable{
+                &:hover{
+                    .m3{
+                        opacity:0;
+                        right:5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.bsx-form-radio{
+    .el-radio__label{
+        display:none;
+    }
+}
+.bsx-form-checkbox{
+    .el-checkbox__label{
+        display:none;
+    }
+}
