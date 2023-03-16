@@ -3,11 +3,7 @@
   "version": "0.1.4",
   "author": "wangkai001",
   "description": "baosight-logistics-ui",
-  "keywords": [
-    "components",
-    "asstes",
-    "utils"
-  ],
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/devilChocolate/baosight-logistics-ui.git"
