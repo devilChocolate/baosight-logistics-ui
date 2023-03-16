@@ -260,20 +260,6 @@ export default {
                         }).catch(({msg})=>{
                             this._loaded=true;
                         });
-                        // this.$http[this.axiosType]({
-                        //     name:this.axiosName,
-                        //     data:isFunction(this.axiosMap)?this.axiosMap('send',this.axiosParam,null):this.axiosParam,
-                        //     loading:{
-                        //         enabled:false
-                        //     }
-                        // }).then(res=>{
-                        //     this.source=isFunction(this.axiosMap)?this.axiosMap('response',res):res;
-                        //     this.list=this.formatSourceList(this.source);
-                        //     this._loaded=true;
-                        //     resolve();
-                        // }).catch(({msg})=>{
-                        //     this._loaded=true;
-                        // });
                     };
                 };
             });

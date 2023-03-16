@@ -7,8 +7,6 @@
  * @Last Modified time: 2018-06-06 14:08:56
  */
 import Vue from 'vue';
-import store from '@/store';
-import router from '@/router';
 import dialog from './src';
 import config from './config';
 import {
@@ -16,9 +14,9 @@ import {
 	isPlainObject,
 	isFunction,
 	extend,
-	cancelRequest
 } from '@/utils/tool';
-
+import Receiver from "@/utils/receiver"
+const receiver = Receiver.instance
 class Dialog {
 	constructor(ops){
 		this.id=createRandomUid();
@@ -71,8 +69,8 @@ class Dialog {
 	registerDialogComponent(){
 		let dialogContructor=Vue.extend({
 			...dialog,
-		   router,
-		   store
+		   router:receiver.router,
+		   store:receiver.store
 	    });
 		return new dialogContructor({
 			data:()=>({
@@ -101,8 +99,8 @@ class Dialog {
 	registerInstanceComponent(instance){
 		let instanceContructor=Vue.extend({
 			...instance,
-			router,
-			store
+			router:receiver.router,
+		    store:receiver.store
 		});
 		return new instanceContructor({
 			data:()=>({

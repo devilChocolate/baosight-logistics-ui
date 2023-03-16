@@ -1,0 +1,86 @@
+.errorItem{
+ .cell {
+    line-height: 54px;
+  }
+}
+
+.lineRequired {
+  .cell {
+    &::before {
+      content: '*';
+      color:red
+    }
+  }
+}
+
+.errorItem {
+  position: relative;
+  // border-color: #f56c6c !important;
+
+  input,
+  .el-date-editor {
+    border-color: #f56c6c !important;
+  }
+
+  .err {
+    line-height: 16px;
+    margin: 0;
+    color: #f56c6c;
+    position: absolute;
+    left: 10px;
+    font-size: 12px;
+    bottom: 1px;
+
+    &::before {
+      margin-right: 3px;
+    }
+  }
+}
+
+.el-input__icon+.err {
+  line-height: 16px;
+  margin: 0;
+  color: #f56c6c;
+  position: absolute;
+  font-size: 12px;
+  bottom: -20px;
+
+  &::before {
+    margin-right: 3px;
+  }
+}
+
+.errorTooltip {
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 2000;
+  font-size: 12px;
+  line-height: 1.2;
+  min-width: 10px;
+  transform-origin: center bottom;
+  background: #fff;
+  border: 1px solid #303133;
+
+  .popper__arrow {
+    border-width: 6px;
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+
+    &::after {
+      content: " ";
+      border-width: 5px;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+
+    }
+  }
+}

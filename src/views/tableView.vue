@@ -1,13 +1,18 @@
 <template>
   <bsx-grid
     ref="gridTable"
-    :data-source="dataSource"
-    :page-limit="200"
+    :list-height="300"
+    :axios-auto="false"
+    axios-url="/cct/rev/primage/pageQuery"
+    :axios-map="handleGridAxiosMap"
     :orderable="true"
-    :is-child-grid="true"
-    :page-enabled="false"
-    grid-id="demo-grid-id-2"
+    check-type="checkbox"
+    :check-row-trigger-click="true"
+    grid-id="demo-grid-id-1"
+    :sort-axios-enabled="false"
+    :page-intercept="clearSelection"
     highlight-current-row
+    @bsx-grid-check-change="handleGridCheckChange"
     style="width: 100%"
   >
     <bsx-grid-column
@@ -49,15 +54,30 @@ export default {
   name: "TableView",
   data() {
     return {
-      dataSource: [],
+      selectsome:[],
     };
   },
-  methods:{
+  methods: {
     formatValue(index, value, col, row) {
-      if (value === 'null') value = ''
-      return this.formatText(value)
+      if (value === "null") value = "";
+      return this.formatText(value);
     },
-  }
+    handleGridAxiosMap(type, result) {
+      switch (type) {
+        case 'send' :
+          return { ...this.filter }
+        case 'response' :
+          return result
+      }
+    },
+    handleGridCheckChange({ rows }) {
+      this.selectsome = rows   
+    },
+    clearSelection(next) {
+      this.$emit('selectionClick', [])
+      next()
+    }
+  },
 };
 </script>
 

@@ -1,6 +1,21 @@
 {
   "name": "baosight-logistics-ui",
   "version": "0.1.0",
+  "author": "wangaki",
+  "description": "baosight-logistics-ui",
+  "keywords": [
+    "components",
+    "asstes",
+    "utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geniusmanyxh/genius-storage"
+  },
+  "license": "ISC",
+  "homepage": "",
+  "bugs": "",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -12,7 +12,7 @@ export default {
   components: { tableView },
   name: 'App',
   created(){
-    //console.log(this.$$loading,'this.$$loading');
+    
   }
 }
 </script>

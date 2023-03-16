@@ -65,7 +65,6 @@ import formError from '../common/error';
 import mixinCommon from '../mixins/common';
 import mixinInput from '../mixins/input';
 import {
-    extend,
     isFunction,
     isPlainObject
 } from '@/utils/tool';
@@ -183,23 +182,6 @@ export default {
             }).catch(({msg})=>{
                 resolve([]);
             });
-            // this.$http[this.axiosType]({
-            //     name:isPlainObject(this.axiosName)?this.axiosName[node.level]:this.axiosName,
-            //     data:isFunction(this.axiosMap)?this.axiosMap('send',{
-            //         node:node,
-            //         ...this.axiosParam
-            //     },node.level):this.axiosParam,
-            //     loading:{
-            //         enabled:false
-            //     }
-            // }).then(res=>{
-            //     if(isFunction(this.axiosMap)){
-            //         res=this.axiosMap('response',res,node.level);
-            //     };
-            //     resolve(res);
-            // }).catch(({msg})=>{
-            //     resolve([]);
-            // });
         },
         /*
     	 * 选择值回调
