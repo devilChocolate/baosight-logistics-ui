@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="app">
     <div id="app-main-section" class="app-main">
       <table-view></table-view>
@@ -15,5 +15,5 @@ export default {
     
   }
 }
-</script>
+</script> -->
 

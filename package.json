@@ -1,16 +1,14 @@
 {
-  "name": "baosight-logistics-ui",
-  "version": "0.1.4",
+  "name": "baosight-as-logistics",
+  "version": "0.1.5",
   "author": "wangkai001",
-  "description": "baosight-logistics-ui",
-  "keywords": [],
+  "description": "baosight-as-logistics",
   "repository": {
     "type": "git",
     "url": "https://github.com/devilChocolate/baosight-logistics-ui.git"
   },
   "license": "ISC",
   "homepage": "",
-  "bugs": "",
   "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",

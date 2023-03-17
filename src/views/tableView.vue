@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <bsx-grid
     ref="gridTable"
     :list-height="300"
@@ -81,4 +81,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style></style> -->
